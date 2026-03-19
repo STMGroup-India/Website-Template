@@ -1,0 +1,153 @@
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  affiliateUrl: string;
+  category: string;
+  isFavorite: boolean;
+  review?: string;
+}
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Sony WH-1000XM5 Headphones",
+    description: "Noise-cancelling headphones I use at every race weekend. Absolute game changer for travel days.",
+    price: "$348",
+    image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "tech",
+    isFavorite: true,
+    review: "These are my go-to headphones for long flights to race weekends. The noise cancellation is unreal — blocks out the paddock noise completely. Battery lasts the entire weekend without charging. If you travel a lot, these are non-negotiable.",
+  },
+  {
+    id: "2",
+    name: "GoPro HERO12 Black",
+    description: "How I capture all my trackside content. Stabilization is insane for motorsport footage.",
+    price: "$399",
+    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "creator-gear",
+    isFavorite: true,
+    review: "This is the camera behind 90% of my trackside content. The HyperSmooth stabilization handles the vibrations perfectly. I mount it everywhere — on barriers, helmets, even on the pit wall. Waterproof too, which saved me at Spa last year.",
+  },
+  {
+    id: "3",
+    name: "MacBook Pro 16\" M3 Max",
+    description: "My editing powerhouse. Renders 4K race edits faster than a pit stop.",
+    price: "$3,499",
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "tech",
+    isFavorite: true,
+    review: "This machine is a beast for video editing. I edit all my race weekend vlogs and analysis videos on this. Exporting a 20-minute 4K video takes under 10 minutes. The display is gorgeous for color grading too.",
+  },
+  {
+    id: "4",
+    name: "PUMA Speedcat OG Sneakers",
+    description: "The iconic F1-inspired sneaker. I wear these to every paddock visit.",
+    price: "$120",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "daily-essentials",
+    isFavorite: true,
+    review: "These are THE motorsport sneaker. Super comfortable for walking around circuits all day. The low profile looks clean with everything. I have three pairs — black, white, and the Ferrari red edition.",
+  },
+  {
+    id: "5",
+    name: "Peak Design Travel Backpack 45L",
+    description: "Fits all my camera gear + laptop for race weekends. Best travel bag I've owned.",
+    price: "$299",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "daily-essentials",
+    isFavorite: false,
+    review: "This backpack goes with me to every Grand Prix. It fits my MacBook, GoPro kit, lenses, drone, and still has room for clothes. The organization is next level — I can find anything in seconds even in a crowded media center.",
+  },
+  {
+    id: "6",
+    name: "DJI Mini 4 Pro Drone",
+    description: "Aerial shots of circuits look incredible with this. Compact enough for travel.",
+    price: "$759",
+    image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "creator-gear",
+    isFavorite: true,
+    review: "The aerial footage I get with this drone is what sets my content apart. It's small enough to fit in my backpack and the 4K footage is cinema quality. The obstacle avoidance means I can focus on the shot, not on crashing.",
+  },
+  {
+    id: "7",
+    name: "Oakley Sutro Sunglasses",
+    description: "UV protection that looks fast. Essential for sunny race days.",
+    price: "$191",
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "daily-essentials",
+    isFavorite: false,
+    review: "These sunglasses are perfect for trackside days. The wraparound design blocks wind and sun from every angle. They look sporty without being over the top. I've worn Oakleys for years and these are my favorite model.",
+  },
+  {
+    id: "8",
+    name: "Garmin Forerunner 965",
+    description: "Track my workouts and heart rate during intense race weekends.",
+    price: "$599",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "fitness",
+    isFavorite: false,
+    review: "I use this to track everything — runs, gym sessions, even my stress levels during qualifying. The AMOLED display is beautiful and the battery lasts over two weeks. It's become part of my daily routine.",
+  },
+  {
+    id: "9",
+    name: "Rode VideoMic Pro+",
+    description: "Crystal clear audio for my trackside interviews and vlogs.",
+    price: "$299",
+    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "creator-gear",
+    isFavorite: false,
+    review: "Audio quality makes or breaks content, and this mic delivers every time. I use it for paddock interviews and voiceovers. The built-in battery means I never worry about phantom power. Pairs perfectly with my camera setup.",
+  },
+  {
+    id: "10",
+    name: "Theragun Elite Massage Gun",
+    description: "Recovery essential after long days walking circuits.",
+    price: "$399",
+    image: "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "fitness",
+    isFavorite: false,
+    review: "Race weekends mean 20K+ steps per day. This massage gun saves my legs every single time. I use it in the hotel after each day at the circuit. Quiet enough to use during late-night editing sessions too.",
+  },
+  {
+    id: "11",
+    name: "Sony A7 IV Camera",
+    description: "My main camera for high-quality race photography and video.",
+    price: "$2,498",
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "creator-gear",
+    isFavorite: true,
+    review: "This is my workhorse camera. The autofocus tracks cars at 200mph without breaking a sweat. 4K 60fps video is buttery smooth. I've shot content at 15+ Grand Prix with this and it never lets me down.",
+  },
+  {
+    id: "12",
+    name: "Hydro Flask 32oz Water Bottle",
+    description: "Stays cold all day in the paddock heat. A race weekend essential.",
+    price: "$44",
+    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&h=600&fit=crop",
+    affiliateUrl: "#",
+    category: "daily-essentials",
+    isFavorite: false,
+    review: "Hydration is crucial when you're out in the sun all day at circuits. This bottle keeps water ice cold for 24 hours. I've tested it in Bahrain heat and Singapore humidity — still cold at the end of the day.",
+  },
+];
+
+export const categories = [
+  { slug: "tech", name: "Tech I Use", icon: "💻", description: "The tech that powers my content and keeps me connected at every Grand Prix." },
+  { slug: "daily-essentials", name: "My Daily Essentials", icon: "🎒", description: "The everyday items I never travel to a race weekend without." },
+  { slug: "creator-gear", name: "Creator Gear", icon: "🎬", description: "The cameras, mics, and tools behind all my F1 content." },
+  { slug: "fitness", name: "Fitness & Lifestyle", icon: "💪", description: "Staying fit and recovered through a 24-race calendar." },
+];
