@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-4 left-4 right-4 z-50 glass-nav rounded-2xl max-w-6xl mx-auto">
+    <nav className="fixed top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 z-50 glass-nav rounded-2xl max-w-6xl mx-auto">
       <div className="px-6 h-14 flex items-center justify-between">
         <Link href="/" className="font-display text-lg font-bold tracking-tight text-white">
           ALEX<span className="gradient-text">TORQUE</span>

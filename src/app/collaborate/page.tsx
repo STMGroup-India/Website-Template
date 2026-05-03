@@ -133,7 +133,7 @@ export default function CollaboratePage() {
             </div>
           </AnimatedSection>
           <AnimatedSection delay={150}>
-            <div className="glass-card rounded-3xl p-8 md:p-10 glow-border" style={{ borderRadius: "1.5rem" }}>
+            <div className="glass-card rounded-3xl p-5 sm:p-8 md:p-10 glow-border" style={{ borderRadius: "1.5rem" }}>
               {submitted ? (
                 <div className="text-center py-10">
                   <div className="w-16 h-16 glass-card rounded-full flex items-center justify-center mx-auto mb-4">

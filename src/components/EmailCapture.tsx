@@ -14,7 +14,7 @@ export default function EmailCapture() {
   return (
     <section className="py-24 px-4 relative">
       <div className="relative z-10 max-w-2xl mx-auto">
-        <div className="glass-card rounded-3xl p-10 md:p-14 text-center glow-border" style={{ borderRadius: "1.5rem" }}>
+        <div className="glass-card rounded-3xl p-6 sm:p-10 md:p-14 text-center glow-border" style={{ borderRadius: "1.5rem" }}>
           <div className="w-14 h-14 btn-neon rounded-2xl flex items-center justify-center mx-auto mb-6">
             <Zap size={24} className="text-white" />
           </div>
@@ -27,12 +27,12 @@ export default function EmailCapture() {
               <p className="text-white font-medium">You&apos;re in! 🏁 Check your inbox soon.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com" required aria-label="Email address"
-                className="flex-1 px-5 py-3.5 glass-input rounded-full text-white text-sm placeholder:text-white/20" />
+                className="flex-1 min-w-0 px-5 py-3.5 glass-input rounded-full text-white text-sm placeholder:text-white/20" />
               <button type="submit"
-                className="btn-neon px-7 py-3.5 text-white text-sm font-semibold rounded-full inline-flex items-center gap-2">
+                className="btn-neon px-7 py-3.5 text-white text-sm font-semibold rounded-full inline-flex items-center justify-center gap-2 shrink-0">
                 Subscribe <Send size={14} />
               </button>
             </form>

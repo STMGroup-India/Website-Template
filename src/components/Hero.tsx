@@ -10,9 +10,9 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-white/[0.03] animate-spin-slow pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-white/[0.04] animate-spin-slow pointer-events-none" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
+      <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
         {/* Avatar with glow ring */}
-        <div className="relative w-32 h-32 mx-auto mb-8 group">
+        <div className="relative w-32 h-32 mb-8 group">
           <div className="absolute inset-[-4px] rounded-full bg-gradient-to-r from-accent via-violet to-cyan opacity-60 blur-md animate-pulse-glow" />
           <div className="absolute inset-[-2px] rounded-full bg-gradient-to-r from-accent via-violet to-cyan opacity-80 glow-border" style={{ borderRadius: "9999px" }} />
           <Image
@@ -28,24 +28,24 @@ export default function Hero() {
         </div>
 
         {/* Name with gradient */}
-        <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-3 tracking-tight">
+        <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-3 tracking-tight text-center w-full">
           {creator.name.split(" ")[0]}{" "}
           <span className="gradient-text-cool">{creator.name.split(" ")[1]}</span>
         </h1>
-        <p className="text-sm text-white/30 mb-2 font-mono">{creator.handle}</p>
-        <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-10">
+        <p className="text-sm text-white/30 mb-2 font-mono text-center">{creator.handle}</p>
+        <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-xl mb-10 text-center px-2">
           {creator.bio}
         </p>
 
         {/* CTA buttons */}
-        <div className="flex flex-wrap justify-center gap-4">
-          <a href="#products" className="btn-neon px-8 py-3.5 text-white text-sm font-semibold rounded-full">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+          <a href="#products" className="btn-neon px-8 py-3.5 text-white text-sm font-semibold rounded-full text-center">
             Shop My Picks
           </a>
-          <a href="#categories" className="btn-glass px-8 py-3.5 text-white text-sm font-medium rounded-full">
+          <a href="#categories" className="btn-glass px-8 py-3.5 text-white text-sm font-medium rounded-full text-center">
             My Setup
           </a>
-          <a href="/collaborate" className="btn-glass px-8 py-3.5 text-white text-sm font-medium rounded-full">
+          <a href="/collaborate" className="btn-glass px-8 py-3.5 text-white text-sm font-medium rounded-full text-center">
             Work With Me
           </a>
         </div>

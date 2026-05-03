@@ -230,8 +230,7 @@ export default function F1Globe() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[1] pointer-events-none"
-      style={{ opacity: 0.5 }}
+      className="fixed inset-0 z-[1] pointer-events-none opacity-30 sm:opacity-50"
       aria-hidden="true"
     />
   );
