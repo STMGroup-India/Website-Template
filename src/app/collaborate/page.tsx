@@ -42,25 +42,22 @@ export default function CollaboratePage() {
   return (
     <div className="relative overflow-hidden">
       {/* Hero */}
-      <section className="pt-28 pb-20 px-4 bg-gradient-to-b from-red-50/50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="pt-32 pb-20 px-4 relative">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 glass-card rounded-full px-4 py-1.5 mb-6">
               <Zap size={14} className="text-accent" />
-              <span className="text-xs font-medium text-accent">Open for Collaborations</span>
+              <span className="text-xs font-medium text-accent-light">Open for Collaborations</span>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={100}>
-            <h1 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-4 tracking-tight">
-              Let&apos;s Create
-              <span className="relative inline-block ml-3">
-                <span className="relative z-10">Together</span>
-                <span className="absolute bottom-1 left-0 right-0 h-3 bg-accent/15 -z-0 rounded" />
-              </span>
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+              Let&apos;s Create{" "}
+              <span className="gradient-text-cool">Together</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={200}>
-            <p className="text-neutral-500 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+            <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
               I partner with brands that align with the F1 and creator lifestyle.
               Let&apos;s build something your audience and mine will love.
             </p>
@@ -79,10 +76,10 @@ export default function CollaboratePage() {
               { label: "Avg. Video Views", value: creator.stats.avgViews, icon: Zap },
             ].map((stat, i) => (
               <AnimatedSection key={stat.label} delay={i * 100}>
-                <div className="bg-white rounded-2xl p-6 text-center border border-red-100/60 shadow-sm hover:shadow-lg hover:shadow-red-100/30 hover:scale-105 transition-all duration-300 group">
-                  <stat.icon size={20} className="mx-auto mb-3 text-neutral-300 group-hover:text-accent transition-colors" />
-                  <p className="text-2xl md:text-3xl font-bold text-neutral-900">{stat.value}</p>
-                  <p className="text-xs text-neutral-500 mt-1">{stat.label}</p>
+                <div className="glass-card rounded-2xl p-6 text-center group">
+                  <stat.icon size={20} className="mx-auto mb-3 text-white/15 group-hover:text-accent transition-colors duration-500" />
+                  <p className="text-2xl md:text-3xl font-bold text-white font-display">{stat.value}</p>
+                  <p className="text-xs text-white/30 mt-1">{stat.label}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -93,11 +90,11 @@ export default function CollaboratePage() {
       {/* Brands Marquee */}
       <section className="py-12 px-4 overflow-hidden">
         <AnimatedSection>
-          <p className="text-center text-xs text-neutral-400 uppercase tracking-widest mb-6">Brands I&apos;ve Worked With</p>
+          <p className="text-center text-xs text-white/20 uppercase tracking-widest mb-6">Brands I&apos;ve Worked With</p>
           <div className="relative">
-            <div className="flex animate-marquee gap-12 items-center justify-center">
+            <div className="flex animate-marquee gap-16 items-center justify-center">
               {[...brandLogos, ...brandLogos].map((brand, i) => (
-                <span key={i} className="text-2xl font-bold text-red-100 whitespace-nowrap tracking-tight select-none">{brand}</span>
+                <span key={i} className="text-3xl font-bold text-white/[0.06] whitespace-nowrap tracking-tight select-none font-display">{brand}</span>
               ))}
             </div>
           </div>
@@ -108,26 +105,16 @@ export default function CollaboratePage() {
       <section className="py-16 px-4">
         <AnimatedSection>
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-accent rounded-3xl p-10 md:p-14 text-center overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
-                <svg className="absolute inset-0 w-full h-full">
-                  <defs>
-                    <pattern id="grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-                      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" strokeWidth="0.5" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-              </div>
+            <div className="relative glass-card rounded-3xl p-10 md:p-14 text-center glow-border overflow-hidden" style={{ borderRadius: "1.5rem" }}>
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                <div className="w-16 h-16 btn-neon rounded-2xl flex items-center justify-center mx-auto mb-5">
                   <Download size={28} className="text-white" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Download My Media Kit</h2>
-                <p className="text-red-100 text-sm md:text-base mb-8 max-w-md mx-auto">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">Download My Media Kit</h2>
+                <p className="text-white/40 text-sm md:text-base mb-8 max-w-md mx-auto">
                   Get the full breakdown of my audience demographics, past collaborations, content style, and rates.
                 </p>
-                <button className="inline-flex items-center gap-2 bg-white text-accent px-8 py-3.5 rounded-full text-sm font-medium hover:bg-red-50 transition-all duration-300 hover:scale-105 shadow-lg">
+                <button className="btn-neon inline-flex items-center gap-2 text-white px-8 py-3.5 rounded-full text-sm font-semibold">
                   <Download size={16} /> Download Media Kit (PDF)
                 </button>
               </div>
@@ -141,45 +128,45 @@ export default function CollaboratePage() {
         <div className="max-w-2xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">Get in Touch</h2>
-              <p className="text-neutral-500 text-sm">Have a project in mind? I&apos;d love to hear about it.</p>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-2">Get in Touch</h2>
+              <p className="text-white/40 text-sm">Have a project in mind? I&apos;d love to hear about it.</p>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={150}>
-            <div className="bg-white rounded-3xl border border-red-100/60 p-8 md:p-10 shadow-lg shadow-red-100/20">
+            <div className="glass-card rounded-3xl p-8 md:p-10 glow-border" style={{ borderRadius: "1.5rem" }}>
               {submitted ? (
                 <div className="text-center py-10">
-                  <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle size={32} className="text-green-500" />
+                  <div className="w-16 h-16 glass-card rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle size={32} className="text-green-400" />
                   </div>
-                  <p className="text-xl font-semibold text-neutral-900">Message sent!</p>
-                  <p className="text-sm text-neutral-500 mt-2">I&apos;ll get back to you within 48 hours. 🏁</p>
+                  <p className="text-xl font-semibold text-white font-display">Message sent!</p>
+                  <p className="text-sm text-white/40 mt-2">I&apos;ll get back to you within 48 hours. 🏁</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="group">
-                      <label htmlFor="name" className="block text-xs font-medium text-neutral-500 mb-2 group-focus-within:text-accent transition-colors">Your Name</label>
+                    <div>
+                      <label htmlFor="name" className="block text-xs font-medium text-white/30 mb-2">Your Name</label>
                       <input id="name" type="text" required value={form.name} onChange={(e) => update("name", e.target.value)}
-                        className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/10 transition-all" />
+                        className="w-full px-4 py-3 glass-input rounded-xl text-sm text-white placeholder:text-white/15" />
                     </div>
-                    <div className="group">
-                      <label htmlFor="email" className="block text-xs font-medium text-neutral-500 mb-2 group-focus-within:text-accent transition-colors">Email</label>
+                    <div>
+                      <label htmlFor="email" className="block text-xs font-medium text-white/30 mb-2">Email</label>
                       <input id="email" type="email" required value={form.email} onChange={(e) => update("email", e.target.value)}
-                        className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/10 transition-all" />
+                        className="w-full px-4 py-3 glass-input rounded-xl text-sm text-white placeholder:text-white/15" />
                     </div>
                   </div>
-                  <div className="group">
-                    <label htmlFor="company" className="block text-xs font-medium text-neutral-500 mb-2 group-focus-within:text-accent transition-colors">Company / Brand</label>
+                  <div>
+                    <label htmlFor="company" className="block text-xs font-medium text-white/30 mb-2">Company / Brand</label>
                     <input id="company" type="text" value={form.company} onChange={(e) => update("company", e.target.value)}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/10 transition-all" />
+                      className="w-full px-4 py-3 glass-input rounded-xl text-sm text-white placeholder:text-white/15" />
                   </div>
-                  <div className="group">
-                    <label htmlFor="message" className="block text-xs font-medium text-neutral-500 mb-2 group-focus-within:text-accent transition-colors">Message</label>
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-medium text-white/30 mb-2">Message</label>
                     <textarea id="message" rows={5} required value={form.message} onChange={(e) => update("message", e.target.value)}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/10 transition-all resize-none" />
+                      className="w-full px-4 py-3 glass-input rounded-xl text-sm text-white placeholder:text-white/15 resize-none" />
                   </div>
-                  <button type="submit" className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-10 py-3.5 rounded-full text-sm font-medium hover:bg-red-700 transition-all duration-300 hover:scale-[1.02] shadow-md shadow-red-200/40">
+                  <button type="submit" className="w-full md:w-auto btn-neon inline-flex items-center justify-center gap-2 text-white px-10 py-3.5 rounded-full text-sm font-semibold">
                     Send Message <Send size={14} />
                   </button>
                 </form>

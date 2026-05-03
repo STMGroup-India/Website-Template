@@ -10,18 +10,30 @@ const config: Config = {
     extend: {
       colors: {
         accent: "#e11d48",
-        "accent-light": "#fecdd3",
-        neutral: {
-          50: "#fafafa",
-          100: "#f5f5f5",
-          150: "#ededed",
-          800: "#262626",
-          900: "#171717",
-          950: "#0a0a0a",
-        },
+        "accent-light": "#fb7185",
+        "accent-dark": "#be123c",
+        violet: "#8b5cf6",
+        cyan: "#06b6d4",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "system-ui", "sans-serif"],
+      },
+      animation: {
+        "float": "float 6s ease-in-out infinite",
+        "float-slow": "float 10s ease-in-out infinite",
+        "pulse-glow": "pulseGlow 3s ease-in-out infinite",
+        "spin-slow": "spin 20s linear infinite",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        pulseGlow: {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
+        },
       },
     },
   },

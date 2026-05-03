@@ -14,22 +14,23 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   if (!category) {
     return (
       <div className="pt-28 pb-16 px-4 text-center">
-        <p className="text-neutral-500">Category not found.</p>
+        <p className="text-white/40">Category not found.</p>
         <Link href="/" className="text-accent text-sm mt-4 inline-block">← Back home</Link>
       </div>
     );
   }
 
   return (
-    <div className="pt-24 pb-16 px-4">
+    <div className="pt-28 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <Link href="/#categories" className="inline-flex items-center gap-1.5 text-sm text-neutral-400 hover:text-accent mb-8 transition-colors">
+        <Link href="/#categories" className="inline-flex items-center gap-1.5 text-sm text-white/30 hover:text-accent mb-8 transition-colors duration-300">
           <ArrowLeft size={16} /> All categories
         </Link>
-        <div className="text-center mb-10">
-          <span className="text-4xl mb-3 block">{category.icon}</span>
-          <h1 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">{category.name}</h1>
-          <p className="text-neutral-500 text-sm max-w-md mx-auto">{category.description}</p>
+        <div className="text-center mb-14">
+          <span className="text-5xl mb-4 block">{category.icon}</span>
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">{category.name}</h1>
+          <p className="text-white/40 text-sm max-w-md mx-auto">{category.description}</p>
+          <div className="shimmer-line w-24 mx-auto mt-6" />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {categoryProducts.map((product) => (

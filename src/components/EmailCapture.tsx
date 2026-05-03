@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, Zap } from "lucide-react";
 
 export default function EmailCapture() {
   const [email, setEmail] = useState("");
@@ -12,27 +12,32 @@ export default function EmailCapture() {
   };
 
   return (
-    <section className="py-16 px-4 bg-accent">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Stay in the Loop</h2>
-        <p className="text-red-100 text-sm mb-8">
-          Join my list for exclusive recommendations, deals, and behind-the-scenes content from race weekends.
-        </p>
-        {submitted ? (
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-            <p className="text-white font-medium">You&apos;re in! 🏁 Check your inbox soon.</p>
+    <section className="py-24 px-4 relative">
+      <div className="relative z-10 max-w-2xl mx-auto">
+        <div className="glass-card rounded-3xl p-10 md:p-14 text-center glow-border" style={{ borderRadius: "1.5rem" }}>
+          <div className="w-14 h-14 btn-neon rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <Zap size={24} className="text-white" />
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex gap-2">
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com" required aria-label="Email address"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm placeholder:text-red-200 focus:outline-none focus:border-white transition-colors" />
-            <button type="submit"
-              className="px-6 py-3 bg-white text-accent text-sm font-medium rounded-full hover:bg-red-50 transition-colors inline-flex items-center gap-2">
-              Subscribe <Send size={14} />
-            </button>
-          </form>
-        )}
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">Stay in the Loop</h2>
+          <p className="text-white/40 text-sm mb-8 max-w-md mx-auto">
+            Join my list for exclusive recommendations, deals, and behind-the-scenes content from race weekends.
+          </p>
+          {submitted ? (
+            <div className="glass-card rounded-2xl p-6">
+              <p className="text-white font-medium">You&apos;re in! 🏁 Check your inbox soon.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex gap-3">
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com" required aria-label="Email address"
+                className="flex-1 px-5 py-3.5 glass-input rounded-full text-white text-sm placeholder:text-white/20" />
+              <button type="submit"
+                className="btn-neon px-7 py-3.5 text-white text-sm font-semibold rounded-full inline-flex items-center gap-2">
+                Subscribe <Send size={14} />
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );

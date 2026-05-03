@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import KerbBackground from "@/components/KerbBackground";
+import F1Globe from "@/components/F1Globe";
 
 export const metadata: Metadata = {
   title: "Alex Torque | F1 Creator Picks & Recommendations",
@@ -18,12 +18,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-white text-neutral-900 antialiased">
-        <Navbar />
-        <div className="relative">
-          <KerbBackground />
-          <main className="relative z-10 min-h-screen">{children}</main>
+      <body>
+        {/* Animated mesh gradient background */}
+        <div className="mesh-bg" aria-hidden="true">
+          <div className="orb orb-1" />
+          <div className="orb orb-2" />
+          <div className="orb orb-3" />
+          <div className="orb orb-4" />
         </div>
+
+        {/* 3D F1 Globe */}
+        <F1Globe />
+
+        <Navbar />
+        <main className="relative z-10 min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
